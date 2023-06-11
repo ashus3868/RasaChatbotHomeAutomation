@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: light on path
+  steps:
+  - intent: light_on
+  - action: utter_light_on
+
+- story: light off path
+  steps:
+  - intent: light_off
+  - action: utter_light_off
+
+- story: fan on path
+  steps:
+  - intent: fan_on
+  - action: utter_fan_on
+
+- story: fan off path
+  steps:
+  - intent: fan_off
+  - action: utter_fan_off
+
+
